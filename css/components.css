@@ -1,0 +1,182 @@
+/* ============================================================
+   SITE HEADER / NAV
+   ============================================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  transition: border-color var(--transition-base),
+              box-shadow   var(--transition-base);
+
+  /* bottom border always present but invisible until scrolled */
+  border-bottom: var(--border-width) solid transparent;
+}
+
+/* Scroll state — toggled by JS */
+.site-header.is-scrolled {
+  border-bottom-color: var(--color-border);
+  box-shadow: 0 2px 16px rgba(26, 26, 24, 0.06);
+}
+
+/* ── Inner layout ─────────────────────────────────────────── */
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  height: 64px;
+}
+
+/* ── Brand / wordmark ─────────────────────────────────────── */
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  margin-right: auto; /* push nav links + CTA to the right */
+  transition: color var(--transition-fast);
+}
+
+.nav-brand:hover {
+  color: var(--color-accent);
+}
+
+/* ── Nav links ────────────────────────────────────────────── */
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-muted);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--color-ink);
+}
+
+/* ── CTA button ───────────────────────────────────────────── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  transition: background var(--transition-fast),
+              transform  var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-1px);
+}
+
+/* ── Hamburger toggle (mobile only) ──────────────────────── */
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.nav-toggle:hover {
+  background: var(--color-surface);
+}
+
+/* Show close icon only when menu is open */
+.nav-toggle .ti-x       { display: none; }
+.nav-toggle .ti-menu-2  { display: block; }
+
+.nav-toggle[aria-expanded="true"] .ti-x      { display: block; }
+.nav-toggle[aria-expanded="true"] .ti-menu-2 { display: none; }
+
+/* ── Mobile breakpoint ────────────────────────────────────── */
+
+@media (max-width: 680px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-cta {
+    display: none; /* shown inside mobile menu instead */
+  }
+
+  .nav-links {
+    /* Hidden panel that drops down below the header */
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    border-bottom: var(--border-width) solid var(--color-border);
+    padding: var(--space-5) var(--gutter) var(--space-6);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity      var(--transition-base),
+                transform    var(--transition-base);
+  }
+
+  .nav-links.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .nav-links a {
+    font-size: var(--text-base);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  /* CTA inside mobile menu */
+  .nav-links ul::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: var(--border-width);
+    background: var(--color-border);
+    margin-top: var(--space-2);
+  }
+
+  .nav-mobile-cta {
+    display: inline-flex;
+    margin-top: var(--space-4);
+  }
+}

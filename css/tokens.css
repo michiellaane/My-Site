@@ -1,0 +1,95 @@
+:root {
+
+    /* — COLOUR PALETTE — */
+    /* Adjust these and everything on the site updates */
+  
+    --color-accent:        #185FA5;   /* primary brand colour */
+    --color-accent-light:  #E6F1FB;   /* tinted backgrounds */
+    --color-accent-dark:   #0C447C;   /* hover states */
+  
+    --color-ink:           #1a1a18;   /* body text */
+    --color-muted:         #6b6b66;   /* secondary text */
+    --color-faint:         #9e9e99;   /* hints, labels */
+  
+    --color-bg:            #ffffff;   /* page background */
+    --color-surface:       #f5f4f0;   /* card / section backgrounds */
+    --color-border:        rgba(26,26,24,0.12);
+    --color-border-strong: rgba(26,26,24,0.25);
+  
+  
+    /* — TYPOGRAPHY — */
+  
+    --font-display:  'Lora', Georgia, serif;     /* headings */
+    --font-body:     'IBM Plex Sans', sans-serif; /* everything else */
+  
+    --text-xs:   11px;
+    --text-sm:   13px;
+    --text-base: 15px;
+    --text-md:   17px;
+    --text-lg:   22px;
+    --text-xl:   28px;
+    --text-2xl:  34px;
+    --text-3xl:  42px;
+  
+    --weight-regular: 400;
+    --weight-medium:  500;
+  
+    --leading-tight:  1.2;
+    --leading-body:   1.75;
+    --leading-snug:   1.5;
+  
+  
+    /* — SPACING — */
+  
+    --space-1:   4px;
+    --space-2:   8px;
+    --space-3:   12px;
+    --space-4:   16px;
+    --space-5:   20px;
+    --space-6:   24px;
+    --space-8:   32px;
+    --space-10:  40px;
+    --space-12:  48px;
+    --space-16:  64px;
+    --space-20:  80px;
+  
+  
+    /* — LAYOUT — */
+  
+    --max-width:     1080px;
+    --gutter:        32px;
+  
+  
+    /* — BORDERS & RADIUS — */
+  
+    --border-width:  0.5px;
+    --radius-sm:     6px;
+    --radius-md:     8px;
+    --radius-lg:     12px;
+    --radius-xl:     16px;
+    --radius-pill:   40px;
+  
+  
+    /* — TRANSITIONS — */
+  
+    --transition-fast:   0.12s ease;
+    --transition-base:   0.2s ease;
+  }
+  
+  
+  /* — DARK MODE — */
+  /* Uncomment when you're ready to support it */
+  
+  /*
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-ink:     #f0efe9;
+      --color-muted:   #a0a09a;
+      --color-faint:   #6b6b66;
+      --color-bg:      #141412;
+      --color-surface: #1e1e1b;
+      --color-border:  rgba(240,239,233,0.1);
+      --color-border-strong: rgba(240,239,233,0.2);
+    }
+  }
+  */

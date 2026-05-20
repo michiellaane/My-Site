@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+# Design system
+
+- Never hardcode a colour, font, spacing, radius, or transition value.
+- Always use tokens from `css/tokens.css`.
+- If a token doesn't exist for what you need, add it to `tokens.css` first, then reference it.
+- Font pairing: Lora (display/headings) + IBM Plex Sans (body/UI).
+- Primary accent: --color-accent (#185FA5).
+- Design reference: Lora + IBM Plex Sans, clean editorial style, not corporate.

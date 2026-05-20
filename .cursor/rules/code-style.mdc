@@ -1,0 +1,16 @@
+---
+alwaysApply: true
+---
+# Code style
+
+- Vanilla HTML, CSS, JS only. No frameworks, no build tools.
+- No inline styles unless absolutely unavoidable.
+- No hardcoded values anywhere — use tokens.
+- Class names in kebab-case (hero-title, not heroTitle).
+- One component at a time. Confirm it works before moving on.
+- File structure:
+  - index.html → HTML structure
+  - css/tokens.css → design tokens only, no styles
+  - css/base.css → resets and global styles
+  - css/components.css → all component styles
+  - js/main.js → minimal JS only

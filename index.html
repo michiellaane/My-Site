@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Product & Design Consultant</title>
+  <meta name="description" content="I help companies validate digital ideas before they build them. Discovery, concept, prototype, testing.">
+
+  <!-- Design tokens first, then base, then components -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Tabler icons (for UI icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-inner">
+
+      <a href="/" class="nav-brand" aria-label="Home">
+        Michiel <!-- replace with your name -->
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#past-work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn-primary nav-mobile-cta">Let's talk</a>
+      </nav>
+
+      <a href="#contact" class="nav-cta btn-primary">Let's talk</a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Open menu"
+      >
+        <i class="ti ti-menu-2" aria-hidden="true"></i>
+        <i class="ti ti-x"      aria-hidden="true"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+    <section id="hero"><!-- hero --></section>
+    <section id="services"><!-- what I do --></section>
+    <section id="for-whom"><!-- who this is for --></section>
+    <section id="past-work"><!-- past work --></section>
+    <section id="contact"><!-- CTA --></section>
+  </main>
+
+  <footer><!-- footer --></footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
