@@ -32,9 +32,9 @@
 /* ── Brand / wordmark ─────────────────────────────────────── */
 
 .nav-brand {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: var(--font-display);
   font-size: var(--text-md);
-  font-weight: 700;
+  font-weight: var(--weight-bold);
   color: var(--color-primary);
   letter-spacing: -0.2px;
   white-space: nowrap;
@@ -723,9 +723,9 @@
 /* ── Brand ───────────────────────────────────────────────────── */
 
 .footer-brand {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: var(--font-display);
   font-size: var(--text-base);
-  font-weight: 700;
+  font-weight: var(--weight-bold);
   color: var(--color-primary);
 }
 

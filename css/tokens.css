@@ -22,8 +22,8 @@
   
     /* — TYPOGRAPHY — */
   
-    --font-display:  'Lora', Georgia, serif;     /* headings */
-    --font-body:     'IBM Plex Sans', sans-serif; /* everything else */
+    --font-display:  'Roboto', sans-serif; /* headings and logo */
+    --font-body:     'Roboto', sans-serif; /* body and UI */
   
     --text-xs:   11px;
     --text-sm:   13px;
@@ -36,6 +36,7 @@
   
     --weight-regular: 400;
     --weight-medium:  500;
+    --weight-bold:    700;
   
     --leading-tight:  1.2;
     --leading-body:   1.75;
