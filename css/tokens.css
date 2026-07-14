@@ -3,18 +3,21 @@
     /* — COLOUR PALETTE — */
     /* Adjust these and everything on the site updates */
   
-    --color-accent:        #185FA5;   /* primary brand colour */
-    --color-accent-light:  #E6F1FB;   /* tinted backgrounds */
-    --color-accent-dark:   #0C447C;   /* hover states */
-  
-    --color-ink:           #1a1a18;   /* body text */
-    --color-muted:         #6b6b66;   /* secondary text */
-    --color-faint:         #9e9e99;   /* hints, labels */
-  
-    --color-bg:            #ffffff;   /* page background */
-    --color-surface:       #f5f4f0;   /* card / section backgrounds */
-    --color-border:        rgba(26,26,24,0.12);
-    --color-border-strong: rgba(26,26,24,0.25);
+    --color-primary:       #3333FF;   /* primary brand */
+    --color-primary-hover: #1F1FFF;   /* primary hover */
+    --color-cta:           #F59E0B;   /* accent / calls to action */
+    --color-success:       #22C55E;
+    --color-error:         #EF4444;
+
+    --color-bg:            #F8FAFC;   /* page background */
+    --color-surface:       #FFFFFF;   /* cards and elevated surfaces */
+    --color-section-alt:   #EEF2F7;   /* alternate sections */
+
+    --color-ink:           #1F2937;   /* primary text */
+    --color-muted:         #6B7280;   /* secondary text */
+    --color-border:        #E2E8F0;
+    --color-shadow:        rgb(31 41 55 / 0.06);
+    --shadow-header:       0 2px 16px var(--color-shadow);
   
   
     /* — TYPOGRAPHY — */
@@ -75,21 +78,3 @@
     --transition-fast:   0.12s ease;
     --transition-base:   0.2s ease;
   }
-  
-  
-  /* — DARK MODE — */
-  /* Uncomment when you're ready to support it */
-  
-  /*
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --color-ink:     #f0efe9;
-      --color-muted:   #a0a09a;
-      --color-faint:   #6b6b66;
-      --color-bg:      #141412;
-      --color-surface: #1e1e1b;
-      --color-border:  rgba(240,239,233,0.1);
-      --color-border-strong: rgba(240,239,233,0.2);
-    }
-  }
-  */

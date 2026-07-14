@@ -7,5 +7,6 @@ alwaysApply: true
 - Always use tokens from `css/tokens.css`.
 - If a token doesn't exist for what you need, add it to `tokens.css` first, then reference it.
 - Font pairing: Lora (display/headings) + IBM Plex Sans (body/UI).
-- Primary accent: --color-accent (#185FA5).
+- Primary brand: --color-primary (#3333FF).
+- CTA accent: --color-cta (#F59E0B).
 - Design reference: Lora + IBM Plex Sans, clean editorial style, not corporate.
