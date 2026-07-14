@@ -32,18 +32,18 @@
 /* ── Brand / wordmark ─────────────────────────────────────── */
 
 .nav-brand {
-  font-family: var(--font-display);
+  font-family: Verdana, Geneva, sans-serif;
   font-size: var(--text-md);
-  font-weight: var(--weight-medium);
-  color: var(--color-ink);
+  font-weight: 700;
+  color: #3333FF;
   letter-spacing: -0.2px;
   white-space: nowrap;
   margin-right: auto; /* push nav links + CTA to the right */
-  transition: color var(--transition-fast);
+  transition: opacity var(--transition-fast);
 }
 
 .nav-brand:hover {
-  color: var(--color-accent);
+  opacity: 0.8;
 }
 
 /* ── Nav links ────────────────────────────────────────────── */
@@ -724,10 +724,10 @@
 /* ── Brand ───────────────────────────────────────────────────── */
 
 .footer-brand {
-  font-family: var(--font-display);
+  font-family: Verdana, Geneva, sans-serif;
   font-size: var(--text-base);
-  font-weight: var(--weight-medium);
-  color: var(--color-ink);
+  font-weight: 700;
+  color: #3333FF;
 }
 
 /* ── Contact ─────────────────────────────────────────────────── */
