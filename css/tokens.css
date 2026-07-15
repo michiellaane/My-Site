@@ -85,5 +85,9 @@
   
     --transition-fast:   0.12s ease;
     --duration-base:     0.2s;
+    --duration-header:   0.3s;
+    --ease-header:       cubic-bezier(0.4, 0, 0.2, 1);
     --transition-base:   var(--duration-base) ease;
+    --transition-header: var(--duration-header) var(--ease-header);
+    --nav-brand-expanded-scale: 2;
   }
