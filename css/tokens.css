@@ -5,7 +5,7 @@
   
     --color-primary:       #3333FF;   /* primary brand */
     --color-primary-hover: #1F1FFF;   /* primary hover */
-    --color-cta:           #F59E0B;   /* accent / calls to action */
+    --color-cta:           var(--color-primary);
     --color-success:       #22C55E;
     --color-error:         #EF4444;
 
@@ -17,6 +17,7 @@
     --color-muted:         #6B7280;   /* secondary text */
     --color-border:        #E2E8F0;
     --color-shadow:        rgb(31 41 55 / 0.06);
+    --color-overlay:       rgb(31 41 55 / 0.5);
     --shadow-header:       0 2px 16px var(--color-shadow);
   
   
@@ -64,8 +65,10 @@
     --max-width:     1080px;
     --gutter:        32px;
     --header-height: 64px;
-    --header-expanded-height: var(--header-height);
-    --nav-toggle-size: 36px;
+    --header-expanded-height: 112px;
+    --nav-toggle-size: 30px;
+    --nav-brand-expanded-size: calc(var(--text-2xl) + 4pt);
+    --nav-brand-collapsed-size: calc(var(--text-md) + 2pt);
   
   
     /* — BORDERS & RADIUS — */

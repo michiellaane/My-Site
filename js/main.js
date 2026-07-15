@@ -29,3 +29,36 @@ navLinks.querySelectorAll('a').forEach(link => {
     navLinks.classList.remove('is-open');
   });
 });
+
+/* ── Booking modal ─────────────────────────────────────────── */
+
+const bookingOpen  = document.getElementById('booking-open');
+const bookingModal = document.getElementById('booking-modal');
+
+if (bookingOpen && bookingModal) {
+  const openBookingModal = () => {
+    bookingModal.classList.add('is-open');
+    bookingModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    bookingModal.querySelector('.modal-close').focus();
+  };
+
+  const closeBookingModal = () => {
+    bookingModal.classList.remove('is-open');
+    bookingModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    bookingOpen.focus();
+  };
+
+  bookingOpen.addEventListener('click', openBookingModal);
+
+  bookingModal.querySelectorAll('[data-modal-close]').forEach(el => {
+    el.addEventListener('click', closeBookingModal);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && bookingModal.classList.contains('is-open')) {
+      closeBookingModal();
+    }
+  });
+}
