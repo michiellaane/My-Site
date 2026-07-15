@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-8);
-  height: 64px;
+  height: var(--header-height);
 }
 
 /* ── Brand / wordmark ─────────────────────────────────────── */
@@ -122,8 +122,67 @@
 /* ── Mobile breakpoint ────────────────────────────────────── */
 
 @media (max-width: 680px) {
+  .site-header {
+    background-color: var(--color-bg);
+    transition: border-color var(--transition-base),
+                box-shadow var(--transition-base),
+                background-color 0s;
+  }
+
+  .site-header.is-scrolled {
+    background-color: var(--color-surface);
+    transition: border-color var(--transition-base),
+                box-shadow var(--transition-base),
+                background-color 0s var(--duration-base);
+  }
+
+  .site-header .nav-inner {
+    position: relative;
+    height: var(--header-expanded-height);
+    transition: height var(--transition-base);
+  }
+
+  .site-header.is-scrolled .nav-inner {
+    height: var(--header-height);
+  }
+
+  .nav-brand {
+    position: absolute;
+    left: 50%;
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+    margin-right: 0;
+    transform: translateX(-50%);
+    transform-origin: left center;
+    transition: left var(--transition-base),
+                transform var(--transition-base),
+                font-size var(--transition-base),
+                color var(--transition-fast);
+  }
+
+  .site-header.is-scrolled .nav-brand {
+    left: var(--gutter);
+    font-size: var(--text-md);
+    transform: translateX(0);
+  }
+
   .nav-toggle {
     display: flex;
+    margin-left: auto;
+    color: var(--color-ink);
+    opacity: 0;
+    visibility: hidden;
+    transition: background var(--transition-fast),
+                opacity 0s,
+                visibility 0s;
+  }
+
+  .site-header.is-scrolled .nav-toggle {
+    opacity: 1;
+    visibility: visible;
+    transition: background var(--transition-fast),
+                opacity 0s var(--duration-base),
+                visibility 0s var(--duration-base);
   }
 
   .nav-cta {
@@ -133,7 +192,7 @@
   .nav-links {
     /* Hidden panel that drops down below the header */
     position: absolute;
-    top: 64px;
+    top: var(--header-expanded-height);
     left: 0;
     right: 0;
     background: var(--color-surface);
@@ -143,7 +202,12 @@
     pointer-events: none;
     transform: translateY(-6px);
     transition: opacity      var(--transition-base),
-                transform    var(--transition-base);
+                transform    var(--transition-base),
+                top          var(--transition-base);
+  }
+
+  .site-header.is-scrolled .nav-links {
+    top: var(--header-height);
   }
 
   .nav-links.is-open {
