@@ -338,7 +338,7 @@
 
 @media (max-width: 680px) {
   .hero {
-    padding-top: var(--space-16);
+    padding-top: var(--mobile-hero-top);
     padding-bottom: var(--space-16);
   }
 

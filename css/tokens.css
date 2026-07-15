@@ -56,6 +56,7 @@
     --space-12:  48px;
     --space-16:  64px;
     --space-20:  80px;
+    --mobile-hero-top: 5px;
   
   
     /* — LAYOUT — */
@@ -63,7 +64,7 @@
     --max-width:     1080px;
     --gutter:        32px;
     --header-height: 64px;
-    --header-expanded-height: 112px;
+    --header-expanded-height: var(--header-height);
   
   
     /* — BORDERS & RADIUS — */
