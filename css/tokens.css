@@ -69,6 +69,8 @@
     --nav-toggle-size: 30px;
     --nav-brand-expanded-size: calc(var(--text-2xl) + 4pt);
     --nav-brand-collapsed-size: calc(var(--text-md) + 2pt);
+    --nav-brand-desktop-size: var(--text-2xl);
+    --footer-brand-desktop-size: var(--text-xl);
   
   
     /* — BORDERS & RADIUS — */

@@ -39,7 +39,7 @@
 
 .nav-brand {
   font-family: var(--font-display);
-  font-size: var(--text-md);
+  font-size: var(--nav-brand-desktop-size);
   font-weight: var(--weight-bold);
   color: var(--color-primary);
   letter-spacing: -0.2px;
@@ -136,6 +136,10 @@
 /* ── Mobile breakpoint ────────────────────────────────────── */
 
 @media (max-width: 680px) {
+  .footer-brand {
+    font-size: var(--text-base);
+  }
+
   .site-header {
     --header-progress: 0;
     background-color: var(--color-bg);
@@ -799,7 +803,7 @@
 
 .footer-brand {
   font-family: var(--font-display);
-  font-size: var(--text-base);
+  font-size: var(--footer-brand-desktop-size);
   font-weight: var(--weight-bold);
   color: var(--color-primary);
 }
